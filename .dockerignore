@@ -1,0 +1,14 @@
+.git
+.gitignore
+.gitattributes
+.editorconfig
+.vscode
+out
+projects/*/out
+*.pdf
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*:Zone.Identifier

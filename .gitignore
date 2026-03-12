@@ -1,0 +1,43 @@
+# LaTeX aux
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.out
+
+# outputs
+out/
+projects/*/out/
+*.pdf
+
+# projects
+# Ignore all project folders by default...
+projects/*
+# ...but keep demo_project as tracked example fixture.
+!projects/demo_project/
+!projects/demo_project/**
+# Still ignore generated output inside demo_project.
+projects/demo_project/out/
+
+# windows metadata
+*:Zone.Identifier
+
+# local machine overrides
+.env
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode-test/

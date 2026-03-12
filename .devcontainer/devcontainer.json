@@ -1,0 +1,26 @@
+{
+  "name": "latex-dev",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "TL_YEAR": "latest",
+      "SNAPSHOT_DATE": "2025/09/01"
+    }
+  },
+  "workspaceFolder": "/workdir",
+  "remoteUser": "latex",
+  "mounts": [
+    "type=volume,source=texlive-cache,target=/usr/local/texlive"
+  ],
+  "features": {},
+  "postCreateCommand": "latexmk -v >/dev/null 2>&1 && (biber --version >/dev/null 2>&1 || true)",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop",
+        "valentjn.vscode-ltex",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  }
+}

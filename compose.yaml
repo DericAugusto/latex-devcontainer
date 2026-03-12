@@ -1,0 +1,20 @@
+services:
+  latex:
+    build:
+      context: .devcontainer
+      dockerfile: Dockerfile
+      args:
+        TL_YEAR: ${TL_YEAR:-latest}
+        SNAPSHOT_DATE: ${SNAPSHOT_DATE:-2025/09/01}
+        USERNAME: ${DOCKER_USER:-latex}
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    working_dir: /workdir
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/workdir
+      - texlive-cache:/usr/local/texlive
+
+volumes:
+  texlive-cache:

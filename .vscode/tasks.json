@@ -1,0 +1,153 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "LaTeX: List Projects",
+      "type": "shell",
+      "command": "make list",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX: New Project",
+      "type": "shell",
+      "command": "make new PROJECT=${input:projectName}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX: Doctor",
+      "type": "shell",
+      "command": "make doctor",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX: Doctor All Projects",
+      "type": "shell",
+      "command": "make doctor-all",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX: Build Project",
+      "type": "shell",
+      "command": "make build PROJECT=${input:projectName}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "LaTeX: Watch Project",
+      "type": "shell",
+      "command": "make watch PROJECT=${input:projectName}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "LaTeX: Clean Project",
+      "type": "shell",
+      "command": "make clean PROJECT=${input:projectName}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX: Hub (Interactive)",
+      "type": "shell",
+      "command": "make hub",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX (Docker): Doctor",
+      "type": "shell",
+      "command": "make c-doctor",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX (Docker): Doctor All Projects",
+      "type": "shell",
+      "command": "make c-doctor-all",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX (Docker): Build Project",
+      "type": "shell",
+      "command": "make c-build PROJECT=${input:projectName}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "LaTeX (Docker): Watch Project",
+      "type": "shell",
+      "command": "make c-watch PROJECT=${input:projectName}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "LaTeX (Docker): Clean Project",
+      "type": "shell",
+      "command": "make c-clean PROJECT=${input:projectName}",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "LaTeX (Docker): Hub (Interactive)",
+      "type": "shell",
+      "command": "make c-hub",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "projectName",
+      "type": "promptString",
+      "description": "Project folder under projects/ (example: MND_complet)",
+      "default": "my_project"
+    }
+  ]
+}
